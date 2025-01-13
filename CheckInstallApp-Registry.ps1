@@ -1,0 +1,2 @@
+﻿#replace computername with any computers that you would like to check
+invoke-command -ComputerName computername -ScriptBlock {$MyProgs = Get-ItemProperty 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'; $MyProgs += Get-ItemProperty 'HKLM:SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' ; $MyProgs.DisplayName | sort -Unique}
