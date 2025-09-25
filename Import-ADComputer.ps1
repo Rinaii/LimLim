@@ -1,0 +1,1 @@
+﻿Get-ADcomputer -Filter {Enabled -eq $True} -Property Created,LastLogonDate -searchbase 'OU=Computers,OU=Corporate,DC=Kode,DC=com'| Select-Object -Property Name, SAMAccountName, Created, LastLogonDate | export-csv C:\Kode\ADcomputeraliveCor.csv
