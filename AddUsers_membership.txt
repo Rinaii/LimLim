@@ -1,0 +1,8 @@
+	#Add users to a AD group membership in AD on prem.
+$users=import-csv c:\laurel\Remoteaccess.txt
+foreach($user in $users)
+{
+$upn = $user.upn
+get-aduser -filter "userprincipalname -eq '$upn'" |
+% {add-adgroupmember -identity "Intune Prod Users" -members $_} -Verbose
+}
