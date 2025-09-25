@@ -1,0 +1,1 @@
+﻿Get-ADGroupMember -Identity O365_Intune_Enrollment | Select-Object name, objectClass,distinguishedName | Export-csv -Path C:\Kope\o365members.csv -NoTypeInformation
