@@ -1,0 +1,14 @@
+
+
+Devices worked but some couldn't load company portal and dsregcmd /status had a WAM error.
+
+What ended up working for us:
+
+Close all apps (or reboot and don't open anything)
+Open elevated prompt
+dsregcmd /cleanupaccounts
+dsregcmd /leave
+Delete all files inside %localappdata%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Settings
+Delete all files inside %localappdata%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts
+Reboot
+After the reboot every client having WAM issues was able to re-enroll their device using the 'work and school accounts' section of settings.
