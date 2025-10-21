@@ -1,0 +1,6 @@
+Get-Content -path "\\MMT\main\Installs\Adobe Uninstall\PC_adobetest.txt" | ForEach-Object {
+    [PSCustomObject]@{
+        Computer_Name = $_
+        Output        = Test-Path "\\$computer\c$\Windows\System32\Macromed\Flash\Flash*, \\$computer\c$\Windows\SysWOW64\Macromed\Flash\Flash*"
+    }
+} | Export-Csv -Path C:\Kode\results-Adobe.csv -NoTypeInformation
