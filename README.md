@@ -21,6 +21,6 @@ This repository represents my growth as an IT professional and my commitment to 
 
 📬 Contact
 
-+ LinkedIn: linkedin.com/in/soklim-seang
++ LinkedIn: https://www.linkedin.com/in/soklim-seang/
 + Email: seangsoklim8@gmail.com
 + Wordpress: https://soklimseang.wordpress.com/
